@@ -29,6 +29,9 @@
             <li class="nav-item">
               <a class="nav-link" href="/party">Partidas</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/gift">Regalos</a>
+            </li>
             @endif;
           </ul>
           <form class="d-flex">

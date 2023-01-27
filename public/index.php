@@ -45,6 +45,18 @@ $router->map('PUT', '/party/[i:id]', 'partyController#update');
 $router->map('DELETE', '/party/[i:id]', 'partyController#destroy');
 }
 
+//Routes of gifts
+$router->map('GET', '/gift', 'giftController#index');
+$router->map('GET', '/gift/[i:id]', 'giftController#show');
+if(isset($_SESSION['name']))
+{
+$router->map('GET', '/gift/create', 'gift/create');
+$router->map('POST', '/gift/create', 'giftController#store');
+$router->map('GET', '/gift/[i:id]/edit', 'giftController#edit');
+$router->map('PUT', '/gift/[i:id]', 'giftController#update');
+$router->map('DELETE', '/gift/[i:id]', 'giftController#destroy');
+}
+
 // Change method PUT y DELETE
 if(isset($_POST['_METHOD'])){
   $_SERVER['REQUEST_METHOD'] = $_POST['_METHOD'];
